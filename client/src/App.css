@@ -1,0 +1,292 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8; /* Light Blue Background */
+  color: #333; /* Dark text for contrast */
+}
+
+/* App Container */
+.App {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: padding 0.3s ease-in-out;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #0066cc; /* Dark Blue */
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Dashboard */
+.dashboard {
+  background-color: #e0f7fa; /* Light Blue background */
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dashboard h2 {
+  color: #0066cc;
+}
+
+.dashboard p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 10px;
+  border: 2px solid #b2ebf2; /* Light Blue Border */
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #00acc1; /* Darker Blue Focus */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #00acc1; /* Button Color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00838f; /* Darker on hover */
+}
+
+/* Expense List */
+.expense-list {
+  background-color: #fff8e1; /* Cream background */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  margin-bottom: 20px;
+}
+
+.expense-list h2 {
+  color: #f57c00; /* Dark Cream/Orange for the header */
+}
+
+.expense-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.expense-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for items */
+  transition: transform 0.3s ease;
+}
+
+.expense-list li:hover {
+  transform: scale(1.02);
+}
+
+.expense-list li span {
+  font-size: 1em;
+  color: #333;
+}
+
+.expense-list button {
+  padding: 5px 10px;
+  background-color: #ff7043; /* Orange button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.expense-list button:hover {
+  background-color: #f4511e; /* Darker orange on hover */
+}
+
+/* Budget Form */
+form input[type="number"] {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+form button {
+  max-width: 150px;
+  margin: 0 auto;
+  background-color: #00796b; /* Darker Blue-Green Button */
+}
+
+form button:hover {
+  background-color: #004d40; /* Even darker on hover */
+}
+
+/* Responsive Design */
+/* Extra Small Devices (Mobile Phones) - Up to 480px */
+@media (max-width: 480px) {
+  /* Smaller font and padding for mobile screens */
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .dashboard p, .expense-list li span {
+    font-size: 0.9rem;
+  }
+
+  form input[type="text"], form input[type="number"], select, button {
+    font-size: 0.8rem;
+    padding: 7px;
+  }
+
+  .expense-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    width: 100%; /* Full-width buttons */
+  }
+
+  .App {
+    padding: 10px;
+  }
+}
+
+/* Small Devices (Mobile Phones, Larger Phones) - Up to 768px */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard p, .expense-list li span {
+    font-size: 1rem;
+  }
+
+  form input[type="text"], form input[type="number"], select, button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .expense-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .expense-list li span {
+    margin-bottom: 5px;
+  }
+
+  button {
+    width: 100%; /* Full-width buttons */
+  }
+
+  .App {
+    padding: 15px;
+  }
+}
+
+/* Medium Devices (Tablets, Small Laptops) - Up to 1024px */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .dashboard p, .expense-list li span {
+    font-size: 1.1rem;
+  }
+
+  form input[type="text"], form input[type="number"], select, button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .expense-list li {
+    font-size: 1rem;
+  }
+
+  .App {
+    padding: 20px;
+  }
+}
+
+/* Large Devices (Desktops, Laptops) - Up to 1440px */
+@media (max-width: 1440px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .dashboard p, .expense-list li span {
+    font-size: 1.2rem;
+  }
+
+  form input[type="text"], form input[type="number"], select, button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .expense-list li {
+    font-size: 1rem;
+  }
+
+  .App {
+    padding: 25px;
+  }
+}
+
+/* Extra Large Devices (Larger Desktops) - Above 1440px */
+@media (min-width: 1441px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard p, .expense-list li span {
+    font-size: 1.2rem;
+  }
+
+  form input[type="text"], form input[type="number"], select, button {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+
+  .expense-list li {
+    font-size: 1.1rem;
+  }
+
+  .App {
+    padding: 30px;
+  }
+}
